@@ -1,0 +1,32 @@
+body {
+        font-family: 'Roboto Mono', monospace;
+        padding: 10vw;
+      }
+      
+      h1 {
+        font-size: 8vw;
+        padding: 0px;
+        margin: 0px;
+      }
+      
+      p {
+        font-size: 2vw;
+        padding: 0px;
+        margin: 0px;
+      }
+      
+      .topnav {
+        float: left;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+      color: pink;
+      }
+      
+      .topnav a.active {
+      color: blue;
+      }
