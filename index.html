@@ -6,13 +6,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     
     <style>
-      
-      div {
-        padding: 10vw;
-      }
-      
+     
       body {
         font-family: 'Roboto Mono', monospace;
+        padding: 10vw;
       }
       
       h1 {
@@ -25,18 +22,41 @@
         font-size: 2vw;
         padding: 0px;
         margin: 0px;
-        color: green;
+      }
+      
+      .topnav {
+        float: left;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+      color: pink;
+      }
+      
+      .topnav a.active {
+      background-color: #4CAF50;
+      color: blue;
       }
             
     </style>
     
   </head>
   <body>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
     <div>
       <h1> Kate Gosselin </h1>
 
       <p> Bay area transportation engineer passioante about <br>
       creating sustainable, equitable, and vibrant places. </p>
+      
     </div>
   </body>
 </html>
