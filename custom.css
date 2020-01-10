@@ -1,40 +1,35 @@
 @charset "utf-8";
-body {
-	font-family: 'Roboto Mono', monospace;
-}
-.masthead {
-  height: 100vh;
-  min-height: 500px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-/* Sticky Footer Classes */
 
-html,
-body {
-  height: 100%;
+/* ALL */
+.landing {
+    font-family: 'Roboto Mono', monospace;
+	margin: 0;
+	padding: 0;
 }
 
-#sticky-footer {
-  flex-shrink: none;
-  color: white;
+/* END ALL */
+
+/* HEADER */
+
+.header {
+	height: 20vh;	
 }
 
-.fa {
-  padding: 20px;
-  font-size: 15px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  color: black;
+/* END HEADER */
+
+/* MAIN */
+
+.main {
+	height: 70vh;
+	width: 100vw;	
 }
 
-.fa:hover {
-  color: blue;
-  text-decoration: none;
+/* END MAIN */
+
+/* FOOTER */
+
+.footer {
+	height: 10vh;	
 }
 
-.footer-theme-override {
-	background-color:  color: white;
-}
+/* FOOTER */
