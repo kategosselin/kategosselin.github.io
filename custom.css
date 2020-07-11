@@ -1,35 +1,555 @@
-@charset "utf-8";
-
-/* ALL */
-.landing {
+/* WHOLE PAGE */
+* {
+    margin: 0px;
+    padding: 0px;
     font-family: 'Roboto Mono', monospace;
-	margin: 0;
-	padding: 0;
+    box-sizing: border-box;
 }
 
-/* END ALL */
-
-/* HEADER */
-
-.header {
-	height: 20vh;	
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 
-/* END HEADER */
-
-/* MAIN */
-
-.main {
-	height: 70vh;
-	width: 100vw;	
+.cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover; 
+    scroll-snap-align: start;
 }
 
-/* END MAIN */
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: royalblue;
+}
+
+::selection {
+  color: white;
+  background: royalblue;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 16px;
+    border: 2px solid #f1f1f1;
+    
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+    
+}
+
+/* NAV BAR */
+
+.navbar {    
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    padding-top: 16px;
+    width: 90%;
+    
+}
+
+nav {
+    float:right;
+     
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    
+}
+.navbar ul li {
+    display: inline-block;
+   
+}
+
+.link {
+    float: right;
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logo a {
+    float: left;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 14px;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar li a {
+    color: black;
+    display: block;
+    text-align: center;
+    padding: 14px 10px;
+    
+    border-bottom: 2px solid white;
+}
+
+.navbar ul li .active {
+    font-weight: 800;
+    color: royalblue;
+    border-bottom: 2px solid royalblue;
+    transition: 0.3s;
+}
+
+
+.link:hover {
+    color: grey;
+    transition: 0.3s;
+}
+
+.logo a:hover {
+    color:grey;
+    transition: 0.3s;
+}
+
+
+/* MAIN CONTENT */
+
+.landing {
+    width: 70%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.content {
+    width: 70%;
+    height: 60%;
+    display: inline-block;
+}
+
+.half {
+    width: 50%;
+    height: 100%;
+    padding-left:10px;
+    padding-right: 10px;
+    float: left; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.half img {
+    width: 70%;
+    height: 100%;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+    padding-left:10px;
+    padding-right: 10px;
+    float: left; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bio h1 {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    
+}
+
+.bio p{
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.9;
+}
+
+
+.portrait {
+  object-fit: cover;
+    height: 90%;
+    width:80%;
+    margin: 0px;
+    float: left;
+    border-radius: 8px;
+    
+}
+
+.resume {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.listing {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100%;
+}
+
+
+.position {
+    width: 100%;
+    float: left;
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+.organization {
+    font-size:14px;
+    font-weight: 100;
+    color: black;
+}
+
+.description {
+    display: inline-block;
+    width: 90%;
+    font-size: 12px;
+}
+
+
+.description ul {
+    padding-left: 24px;
+}
+.description li {
+    padding-top: 4px;
+}
+
+ /*EXPERIENCE*/
+.container {
+    width: 70%;
+    height: 60%;
+}
+
+ /*SKILLS*/
+/* Container for skill bars */
+
+.skilldescript {
+    width: 100%;
+    display:inline-block;
+    padding: 0;
+}
+
+.skillname {
+    font-size: 16px;
+    font-weight: 800;
+    width:60%;
+    float: left;
+}
+
+.amount {
+    font-size: 14px;
+    font-weight: 100;
+    text-align: right;
+    float:left;
+    width:30%;
+}
+
+.skillsholder {
+    display:inline-block;
+}
+
+.skillshalf{
+    width: 50%;
+    height:100%;
+    float: left;
+}
+.skillcontainer {
+  width: 90%; /* Full width */
+  background-color: lightgray; /* Grey background */
+    height: 10px;
+    border-radius: 5px;
+}
+
+.skills {
+    color: white;
+    height: 10px;
+    border-radius: 5px;
+}
+
+
+.ten {width: 10%; background-color: black;transition: width 2s;}
+.twenty {width: 20%; background-color: black;}
+.thirty {width: 30%; background-color: black;} 
+.forty {width: 40%; background-color: black;} 
+.fifty {width: 50%; background-color: black;}
+.sixty {width: 60%; background-color: black;}
+.seventy {width: 70%; background-color: black;} 
+.eighty {width: 80%; background-color: black;}
+.ninety {width: 90%; background-color: black;}
+.hundred {width: 100%; background-color: black;}
+
+
+/* Style the tab */
+.tab {
+    float: left;
+    background-color: white;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    display: block;
+    background-color: inherit;
+    border-left:none;
+    border-bottom:none;
+    border-top:none;
+    border-right:2px solid white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 24px;
+    color: black;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-timing-function: ease-in;
+    text-align: right;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    color:grey;
+    transition: 0.3s;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    color: royalblue;
+    border-right: 2px solid royalblue;
+    font-weight: 800;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 0px 0px 24px;
+    width: 85%;
+    border: none;
+    height: 100%;
+    animation: fadeEffect 0.3s;
+
+}
+
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+
+/*CONTACT PAGE*/
+.contactinfo {
+    font-size: 14px;
+}
+
+.email {
+    color:black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.email:hover {
+    color:grey;
+    transition: 0.3s;
+}
+
+
+/*Portfolio*/
+
+
+.samplework {
+    width:33.333%;
+    height: 50%;
+    float: left;
+    padding: 6px;
+}
+
+
+.gallery {
+    width: 70%;
+    height: 60%;
+    display: block;
+}
+
+.thumbnail:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+    transition: 0.3s;
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window>div {
+  width: 70%;
+    height:60%;
+  position: relative;
+  margin: 10% auto;
+  padding: 2rem;
+  background: white;
+}
+
+
+.modal-close {
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+    padding: 10px;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+    transition: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.modal-close:hover {
+  color: grey;
+    transition: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.projectvisuals {
+    height:100%;
+    width:60%;
+    float: left;
+    padding-top: 20px;
+    padding-left: 20px;
+
+}
+
+.projectvisuals iframe {
+    width: 100%;
+    height:100%;
+    border: 3px solid black;
+}
+
+.projectdescription {
+    height: 100%;
+    width: 40%;
+    float: left;
+    padding-top: 20px;
+    padding-right: 20px;
+    overflow: auto;
+}
+
+.projectdescription img{
+    padding-top: 14px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.projecttitle {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 800;
+}
+.tags {
+    width: 100%;
+    font-size: 12px;
+    color: gray;
+    padding-top:2px;
+    padding-bottom:8px;
+}
+
+.projecttext {
+    width: 100%;
+    font-size: 12px;
+    text-align: justify;
+    line-height: 1.9;
+}
 
 /* FOOTER */
 
 .footer {
-	height: 10vh;	
+    background-color: white;
+    position: fixed;
+    bottom: 0px;
+    padding-bottom: 16px;
+    width: 100%;
+    text-align: center;
 }
 
-/* FOOTER */
+
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.fa:hover {
+    color: grey;
+    transition: 0.3s;
+}
