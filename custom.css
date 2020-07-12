@@ -4,7 +4,6 @@
     padding: 0px;
     font-family: 'Roboto Mono', monospace;
     box-sizing: border-box;
-    background-color: red;
 }
 
 html {
@@ -58,7 +57,7 @@ html {
 /* NAV BAR */
 
 .navbar {    
-    background-color: white;
+    background-color: red;
     position: fixed;
     top: 0px;
     padding-top: 16px;
