@@ -5,7 +5,7 @@
     
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel = "stylesheet" type = "text/css" href = "custom.css">
+<link rel = "stylesheet" type = "text/css" href = "custom.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     
@@ -62,16 +62,16 @@ $(window).scroll(function() {
     
 
 
-    <div class = "cover"  id = "top">
+    <div class = "cover"  id = "home">
         
         <div class="navbar">
             <div class="logo">
-                <a href="#top">Kate Gosselin</a>
+                <a href="#home">Kate Gosselin</a>
             </div>
             
             <nav>
                 <ul>
-                    <li><a class = "link active" href="#top">Home</a></li>
+                    <li><a class = "link active" href="#home">Home</a></li>
                     <li><a class = "link" href="#about">About</a></li>
                     <li><a class = "link" href="#experience">Experience</a></li>
                     <li><a class = "link" href="#portfolio">Portfolio</a></li>
@@ -97,7 +97,7 @@ $(window).scroll(function() {
     
         <div class = "content">
             <div class = "half">
-                <img src="Photos/photo.jpg" class = "portrait">
+                <img src="Photos/photo.JPG" class = "portrait"/>
             </div>
             <div class = "half">
                 <div class = "bio">
@@ -172,7 +172,7 @@ $(window).scroll(function() {
                         </div>
                         <div class = "listing">
                             <div class = "position">
-                                <p> Engineer Intern <span class="organization"> @ Federal Transit Administration</span> </p>
+                                <p> Engineer Intern <span class="organization"> @ Federal Transit  Administration</span> </p>
                             </div>
                             <div class = "description">
                                 <ul>
@@ -593,11 +593,11 @@ function openSection(evt, sectionName) {
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].className = tablinks[i].className.replace(" tabactive", "");
   }
   document.getElementById(sectionName).style.display = "block";
   
-  evt.currentTarget.className += " active";
+  evt.currentTarget.className += " tabactive";
 }
 
 // Get the element with id="defaultOpen" and click on it
