@@ -8,7 +8,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
     overflow-y: scroll;
 }
 
@@ -19,7 +18,6 @@ html {
     align-items: center;
     justify-content: center;
     background-size: cover; 
-    scroll-snap-align: start;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -357,7 +355,7 @@ nav {
 }
 
 /* Create an active/current "tab button" class */
-.tab button.active {
+.tab button.tabactive {
     color: royalblue;
     border-right: 2px solid royalblue;
     font-weight: 800;
